@@ -36,6 +36,18 @@ void nft_inverse(complex t[], complex s[], int n) {
 }
 
 void fft(complex s[], complex t[], int n, int sign) {
+    int tamanho = n/2;
+    complex sp[tamanho];
+    complex si[tamanho];
+    int i;
+    for (i = 0; i < tamanho; i++) {
+        if (i % 2 == 0) {
+            sp[i/2] = s[i];
+        } else {
+            si[i/2] = s[i];
+        }
+    }
+    
 }
 
 void fft_forward(complex s[], complex t[], int n) {
